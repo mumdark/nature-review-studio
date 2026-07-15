@@ -2,17 +2,13 @@
 
 **简体中文（默认）** · [English](README_EN.md)
 
-> Nature 风格多视角审稿与回复 Skill，基于 1287 份 Nature Peer-Review-File (2025–2026) 蒸馏。
+> Nature 风格多视角审稿与回复 Skill，基于 1287 份 Nature 审稿意见 (2025–2026) 蒸馏。
 
 ## 一键装机
 
 ```powershell
-# 方式 A：在 Codex 里说
-#   "请安装位于 <path>/nature-review-studio-v1.4.1 的 Skill"
-
-# 方式 B：手动
-cd <path>/nature-review-studio-v1.4.1
-powershell -ExecutionPolicy Bypass -File .\install.ps1
+# 在 Codex 里说
+#   "请安装位于 路径/nature-review-studio-v1.4.1 的 Skill"
 ```
 
 装机脚本会：
@@ -38,7 +34,7 @@ nature-review-studio-v1.4.1/
 └── pdfs/.gitkeep                # update 入口占位
 ```
 
-发布版总体积 **~11 MB**（之前 V1.4.0 是 150 MB，因为内嵌了 138 MB 的 cases.jsonl）。`cases.jsonl` 是离线语料库，运行时**不读**，所以不随发布版带；如需做"二审相似度检索"或重新生成索引，可按下方说明单独下载。
+发布版总体积 **~11 MB**。
 
 ## 三个接口
 
@@ -54,18 +50,18 @@ review 与 respond 永远恰好两个文件，无其他附带产物。
 
 | 蒸馏产物 | 落到 references 哪里 | 作用 |
 |---|---|---|
-| 12 个 concern axis + 默认严重度 | `skill/references/review-axes.md §A` | 决定"该问什么" |
-| 6 种 manuscript → reviewer set 映射 | `skill/references/review-axes.md §B` | 决定"派几个审稿人、各管什么" |
-| 21 种 response strategy | `skill/references/response-axes.md §A` | 决定"怎么回" |
-| 8 种 action status | `skill/references/response-axes.md §B` | 决定"任务表状态字段" |
+| 12 个 concern axis + 默认严重度 | `skill/references/review-axes.md` | 决定"该问什么" |
+| 6 种 manuscript → reviewer set 映射 | `skill/references/review-axes.md` | 决定"派几个审稿人、各管什么" |
+| 21 种 response strategy | `skill/references/response-axes.md` | 决定"怎么回" |
+| 8 种 action status | `skill/references/response-axes.md` | 决定"任务表状态字段" |
 
 ### 1. 12 个 concern axis（审稿问题分类）
 
-**是什么**：审稿人可能问的所有问题的"目录"。从 1287 份 Nature PRF 里人工归类，合并同类、剔除偶然项，得出 12 类。
+**是什么**：审稿人可能问的所有问题的"目录"。skill 从 1287 份 Nature PRF 里人工归类，合并同类、剔除偶然项，得出 12 类。
 
 **为什么是 12 个**：太少了（比如只分"实验/写作"两类）会过于笼统，审稿意见写不出"问到了哪个点"；太多了（几十类）反而无法复用，每类样本量太少。
 
-**实测频次**（来自 `knowledge/index_axes.json`，扫了 1287 case 的全部评论标签）：
+**实测频次**（扫了 1287 case 的全部评论标签）：
 
 | 12 axis | 1287 PRF 命中次数 |
 |---|---|
@@ -207,30 +203,3 @@ review 与 respond 永远恰好两个文件，无其他附带产物。
   - 12 axis 实测频次（`knowledge/index_axes.json`）—— 与 references 12 axis 名完全一致
   - 9 个方法家族实测频次（`knowledge/index_methods.json`）—— 从 1287 case 全文扫出
   - 12 axis × 3 档严重度分布（`knowledge/index_severity.json`）—— 从评论文本分类
-  - 封版 manifest（`knowledge/snap_full_v1.2.json`）—— `case_count=1287` + `source_sha256`
-
-- **cases.jsonl（138 MB）—— 不随发布版带**，运行时也不读。如需做：
-  - 重新生成索引：`python scripts/extract_concerns.py --input <cases.jsonl> --out-dir knowledge/`
-  - 二审相似度检索：先 `python scripts/extract_concerns.py` 重建索引，再自行实现 RAG
-  - 单独下载：见 `release.json` / GitHub Release 资产
-
-## 三件套 pytest
-
-在 release 根目录里：
-
-```powershell
-python tests\test_version_pin.py
-python tests\test_no_identifiers.py         # 无 cases.jsonl 时自动 SKIP
-python tests\test_render_review_docx.py
-```
-
-## 已知问题
-
-- `tests/test_no_identifiers.py` 在发布版里默认 SKIP（无 cases.jsonl）。如需跑，把工作区的 `nature_open_peer_review\build\pipeline\tests\test_no_identifiers.py` 跑一遍，那里 snap_full/cases.jsonl 还在
-- `index_severity.json` 的"minor 占绝对多数"反映了 PRF 评论的措辞倾向（reviewer 普遍礼貌），不是 axis 真实严重度偏差；如需调权重可改 `extract_concerns.py` 的 SEV_KEYWORDS 阈值
-
-## 卸载
-
-```powershell
-Remove-Item -Recurse -Force "$HOME\.codex\skills\nature-review-studio"
-```
