@@ -6,9 +6,9 @@
 
 ## 一键装机
 
+在 Codex 里说
 ```powershell
-# 在 Codex 里说
-#   "请安装位于 路径/nature-review-studio-v1.4.1 的 Skill"
+请安装位于 https://github.com/mumdark/nature-review-studio 的 Skill
 ```
 
 装机脚本会：
