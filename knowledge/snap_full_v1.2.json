@@ -1,0 +1,8 @@
+{
+  "label": "nature_open_peer_review_full",
+  "version": "1.2.0",
+  "generated_at": "2026-07-14T08:20:31Z",
+  "source": "nature_open_peer_review\\build\\snapshots\\snap_full\\cases.jsonl",
+  "case_count": 1287,
+  "source_sha256": "0a0378fd4bb149b9d51ddb6db40ba5f36bc66bef894af8fbfc3e6676a65f5818"
+}

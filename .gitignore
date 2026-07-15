@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+output/smoke_*.docx
+output/smoke_*.md
+pdfs/*.pdf
+pdfs/*.zip

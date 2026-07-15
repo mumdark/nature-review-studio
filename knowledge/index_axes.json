@@ -1,0 +1,84 @@
+{
+  "axes_ranked": [
+    [
+      "experimental-design",
+      6776
+    ],
+    [
+      "figures-and-tables",
+      6379
+    ],
+    [
+      "claim-moderation",
+      3824
+    ],
+    [
+      "novelty-significance",
+      3185
+    ],
+    [
+      "reproducibility",
+      2751
+    ],
+    [
+      "writing-clarity",
+      2513
+    ],
+    [
+      "data-resource-quality",
+      1153
+    ],
+    [
+      "clinical-validity",
+      1149
+    ],
+    [
+      "mechanism-evidence",
+      875
+    ],
+    [
+      "mechanistic-vs-correlative",
+      516
+    ],
+    [
+      "statistical-rigor",
+      465
+    ],
+    [
+      "ethical-governance",
+      83
+    ]
+  ],
+  "axis_definitions": [
+    "novelty-significance",
+    "mechanism-evidence",
+    "experimental-design",
+    "statistical-rigor",
+    "reproducibility",
+    "clinical-validity",
+    "ethical-governance",
+    "data-resource-quality",
+    "figures-and-tables",
+    "writing-clarity",
+    "claim-moderation",
+    "mechanistic-vs-correlative"
+  ],
+  "raw_to_canonical": {
+    "novelty": "novelty-significance",
+    "machinery": "mechanism-evidence",
+    "controls": "experimental-design",
+    "sample_size": "experimental-design",
+    "comparator": "experimental-design",
+    "statistical": "statistical-rigor",
+    "data_availability": "reproducibility",
+    "clinical": "clinical-validity",
+    "ethics": "ethical-governance",
+    "methods_detail": "data-resource-quality",
+    "external_validation": "data-resource-quality",
+    "figure_quality": "figures-and-tables",
+    "writing": "writing-clarity",
+    "interpretation": "claim-moderation",
+    "limitation": "claim-moderation",
+    "long_term_or_followup": "mechanistic-vs-correlative"
+  }
+}

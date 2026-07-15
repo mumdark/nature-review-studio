@@ -1,0 +1,62 @@
+{
+  "claim-moderation": {
+    "major": 385,
+    "minor": 3193,
+    "minor-major": 246
+  },
+  "clinical-validity": {
+    "major": 103,
+    "minor": 1005,
+    "minor-major": 41
+  },
+  "data-resource-quality": {
+    "major": 109,
+    "minor": 1010,
+    "minor-major": 34
+  },
+  "ethical-governance": {
+    "major": 6,
+    "minor": 74,
+    "minor-major": 3
+  },
+  "experimental-design": {
+    "major": 572,
+    "minor": 5991,
+    "minor-major": 213
+  },
+  "figures-and-tables": {
+    "major": 391,
+    "minor": 5848,
+    "minor-major": 140
+  },
+  "mechanism-evidence": {
+    "major": 94,
+    "minor": 751,
+    "minor-major": 30
+  },
+  "mechanistic-vs-correlative": {
+    "major": 52,
+    "minor": 446,
+    "minor-major": 18
+  },
+  "novelty-significance": {
+    "major": 344,
+    "minor": 2728,
+    "minor-major": 113
+  },
+  "reproducibility": {
+    "major": 157,
+    "minor": 2512,
+    "minor-major": 82
+  },
+  "statistical-rigor": {
+    "major": 32,
+    "minor": 420,
+    "minor-major": 13
+  },
+  "writing-clarity": {
+    "major": 157,
+    "minor": 2230,
+    "minor-major": 126
+  }
+}

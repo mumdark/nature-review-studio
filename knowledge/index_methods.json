@@ -1,0 +1,50 @@
+{
+  "families_ranked": [
+    [
+      "review-theory",
+      1177
+    ],
+    [
+      "data-resource",
+      778
+    ],
+    [
+      "ML",
+      588
+    ],
+    [
+      "wet-lab",
+      492
+    ],
+    [
+      "omics",
+      457
+    ],
+    [
+      "imaging",
+      424
+    ],
+    [
+      "clinical",
+      413
+    ],
+    [
+      "simulation",
+      146
+    ],
+    [
+      "unspecified",
+      20
+    ]
+  ],
+  "method_keywords": {
+    "wet-lab": 13,
+    "clinical": 12,
+    "imaging": 10,
+    "ML": 12,
+    "simulation": 7,
+    "data-resource": 9,
+    "omics": 11,
+    "review-theory": 6
+  }
+}
