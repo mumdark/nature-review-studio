@@ -18,19 +18,10 @@ The output language follows the user's prompt unless explicitly overridden.
 
 ## Installation
 
-### From Codex
-
 Ask Codex:
 
 ```text
 Install the skill located at <path>/nature-review-studio-v1.4.1.
-```
-
-### Manual installation on Windows
-
-```powershell
-cd <path>/nature-review-studio-v1.4.1
-powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
 The installer:
