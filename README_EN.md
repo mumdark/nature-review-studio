@@ -81,39 +81,6 @@ Both `review` and `respond` create exactly two synchronized files:
 
 The files use the same language, section order, reviewer numbering, concerns, consensus content, and revision task table. Internal coverage checks, claim–evidence maps, adversarial checks, and editor-decision hints remain silent.
 
-## Knowledge indexes
-
-| File | Content |
-|---|---|
-| `knowledge/index_axes.json` | Frequencies and mappings for the 12 concern axes |
-| `knowledge/index_methods.json` | Nine manuscript method families |
-| `knowledge/index_severity.json` | Three-level severity distributions by axis |
-| `knowledge/snap_full_v1.2.json` | Frozen case count and source checksum |
-
-To rebuild the indexes with a separately obtained authorized corpus:
-
-```powershell
-python scripts\extract_concerns.py --input <cases.jsonl> --out-dir knowledge
-```
-
-## Validation
-
-Run from the release root:
-
-```powershell
-python tests\test_version_pin.py
-python tests\test_no_identifiers.py
-python tests\test_render_review_docx.py
-```
-
-`test_no_identifiers.py` skips automatically when the optional offline corpus is absent.
-
-## Uninstall
-
-```powershell
-Remove-Item -Recurse -Force "$HOME\.codex\skills\nature-review-studio"
-```
-
 ## Release notes
 
 See [RELEASE_NOTES_EN.md](RELEASE_NOTES_EN.md). Chinese release notes are available in [RELEASE_NOTES.md](RELEASE_NOTES.md).
