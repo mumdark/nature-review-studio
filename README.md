@@ -16,25 +16,7 @@
 - 把当前目录写入 NRS_ROOT（环境变量 + 持久化到 `skill/.nrs_root`）
 - 验证 frontmatter 与 6 个 references 全部就位
 
-## 目录布局
-
-```
-nature-review-studio-v1.4.1/
-├── README.md
-├── README_EN.md
-├── RELEASE_NOTES.md
-├── RELEASE_NOTES_EN.md
-├── install.ps1
-├── .gitignore
-├── skill/                       # Codex 提示词
-├── scripts/                     # 渲染与蒸馏
-├── tests/                       # 回归测试
-├── knowledge/                   # 蒸馏索引（4 个小 JSON）
-├── output/                      # 1 对示例
-└── pdfs/.gitkeep                # update 入口占位
-```
-
-发布版总体积 **~11 MB**。
+总体积 **~11 MB**。
 
 ## 三个接口
 
