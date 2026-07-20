@@ -26,7 +26,6 @@ Please install the Skill located at https://github.com/mumdark/nature-review-stu
 The installation script will:
 - Copy `skill/` to `$HOME/.codex/skills/nature-review-studio/`
 - Write the current directory to NRS_ROOT (environment variable + persist it to `skill/.nrs_root`)
-- Verify that the frontmatter and all 6 references are in place
 
 Total size: **~11 MB**.
 
