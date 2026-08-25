@@ -29,6 +29,13 @@ The installation script will:
 
 Total size: **~11 MB**.
 
+## Codex Usage Examples
+
+```md
+$Nature Review Studio Please use Nature Review Studio to review the manuscript `tpm_manuscript.pdf` located on the desktop.
+
+$Nature Review Studio Please use Nature Review Studio to draft a response to the review comments in `review.txt` located on the desktop.
+
 ### Three interfaces
 
 | Interface | Trigger | Output |
