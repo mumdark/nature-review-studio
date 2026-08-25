@@ -18,6 +18,14 @@
 
 总体积 **~11 MB**。
 
+
+## codex 调用示例
+```md
+$Nature Review Studio 请基于 nature review studio 为桌面的tpm_manuscript.pdf文章进行审稿
+
+$Nature Review Studio 请基于 nature review studio 为桌面的review.txt审稿意见进行回复
+```
+
 ## 三个接口
 
 | 接口 | 触发 | 输出 |
