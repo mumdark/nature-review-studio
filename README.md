@@ -188,3 +188,11 @@ review 与 respond 永远恰好两个文件，无其他附带产物。
   - 12 axis 实测频次（`knowledge/index_axes.json`）—— 与 references 12 axis 名完全一致
   - 9 个方法家族实测频次（`knowledge/index_methods.json`）—— 从 1287 case 全文扫出
   - 12 axis × 3 档严重度分布（`knowledge/index_severity.json`）—— 从评论文本分类
+
+
+## 🤝 Contributions / 贡献
+
+欢迎提出问题、建议和提交 Pull Request！
+
+AI 相关应用联系或合作可邮件：
+- 307686155@qq.com
