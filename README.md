@@ -15,10 +15,12 @@
 
 
 ## codex 调用示例
-```md
-$Nature Review Studio 请基于 nature review studio 为桌面的tpm_manuscript.pdf文章进行审稿
 
-$Nature Review Studio 请基于 nature review studio 为桌面的review.txt审稿意见进行回复
+codex可以使用'$'唤起已安装skill:
+```md
+$Nature Review Studio 请为桌面的tpm_manuscript.pdf文章进行审稿
+
+$Nature Review Studio 请为桌面的review.txt审稿意见进行回复
 ```
 
 ## 三个接口
