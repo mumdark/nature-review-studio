@@ -11,11 +11,6 @@
 请安装位于 https://github.com/mumdark/nature-review-studio 的 Skill
 ```
 
-装机脚本会：
-- 把 `skill/` 复制到 `$HOME/.codex/skills/nature-review-studio/`
-- 把当前目录写入 NRS_ROOT（环境变量 + 持久化到 `skill/.nrs_root`）
-- 验证 frontmatter 与 6 个 references 全部就位
-
 总体积 **~11 MB**。
 
 
