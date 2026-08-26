@@ -195,6 +195,3 @@ review 与 respond 永远恰好两个文件，无其他附带产物。
 ## 🤝 Contributions / 贡献
 
 欢迎提出问题、建议和提交 Pull Request！
-
-AI 相关应用或合作可以进一步沟通交流：
-- 307686155@qq.com
